@@ -1,0 +1,40 @@
+.navbar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid #ff51df;
+  border-radius: 25px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.list-nav {
+  color: #ff51df;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.list-nav li {
+  margin: 0 20px;
+}
+
+.flex-box {
+  background-color: #ff51df;
+  color: rgb(255, 255, 255);
+  max-width: 100vw;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.image-small {
+  height: 60px;
+}
