@@ -1,26 +1,25 @@
+/* Header */
 .navbar {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   border: 2px solid #ff51df;
   border-radius: 25px;
+  margin-bottom: 20px; 
 }
 
 .logo {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-left: 20px;
 }
 
 .list-nav {
-  color: #ff51df;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  list-style-type: none;
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
 }
 
 .list-nav li {
@@ -29,12 +28,70 @@
 
 .flex-box {
   background-color: #ff51df;
-  color: rgb(255, 255, 255);
-  max-width: 100vw;
-  padding: 20px 30px;
+  color: #fff;
+  padding: 10px 20px;
   border-radius: 15px;
 }
 
 .image-small {
   height: 60px;
+}
+
+/* Body */
+.mainbox {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #ff51df;
+  border-radius: 25px;
+  margin-top: 20px; 
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-big {
+  height: 356px;
+  width: 368px;
+  margin-right: 20px; 
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  color: #ff51df
+}
+
+.text-content h2 {
+  color: #ff51df
+  margin-bottom: 10px; 
+}
+
+.text-content h4 {
+  margin-bottom: 20px; 
+  color: #ff51df
+}
+
+.text-content h6 {
+  margin-top: 0; 
+  line-height: 1.5; 
+  color: #ff51df
+}
+
+.text {
+  color: #ff51df;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.list-text {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
 }
