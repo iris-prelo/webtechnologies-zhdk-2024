@@ -6,14 +6,45 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div id="main">
-      <div class="playlist">
-        <h1>Spotify playlist</h1>
-
+    <div class="background">
+      <div class="window">
+        <div class="menu-icon">
+          <img src="images/equalizer.png" class="menu-icon" />
+        </div>
+        <div class="content">
+          <img src="images/AlbumCover.jpg" class="album-cover" />
+          <h2 class="song-name">Song Name</h2>
+          <p class="artist-name">Artist Name</p>
+        </div>
+        <div class="time-bar">
+          <img src="images/time bar time.png" class="time-bar" />
+        </div>
+        <div>
+          <ul class="play-bar">
+            <li class="play-bar-item"><img src="images/rewind.png" /></li>
+            <li class="play-bar-item"><img src="images/play-button.png" /></li>
+            <li class="play-bar-item"><img src="images/rewind copy.png" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="playlist-container">
+        <h1>Spotify Playlist</h1>
         <div data-js="tracks">
           <!-- here we are going to display the fetched tracks -->
+        </div>
+        <div class="floating-menu-bar">
+          <ul class="play-bar">
+            <li class="floating-menu-bar-item">
+              <img src="images/subtitle.png" />
+            </li>
+            <li class="floating-menu-bar-item">
+              <img src="images/clapperboard.png" />
+            </li>
+            <li class="floating-menu-bar-item">
+              <img src="images/display-frame.png" />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
