@@ -7,17 +7,18 @@
   padding: 20px;
   border: 2px solid #ff51df;
   border-radius: 25px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-left: 18px;
 }
 
 .list-nav {
   display: flex;
-  list-style-type: none; 
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -31,6 +32,8 @@
   color: #fff;
   padding: 10px 20px;
   border-radius: 15px;
+  width: 100px;
+  text-align: center;
 }
 
 .image-small {
@@ -43,10 +46,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 80px;
   border: 2px solid #ff51df;
   border-radius: 25px;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .content {
@@ -54,32 +57,36 @@
   align-items: flex-start;
 }
 
-.image-big {
+.image-big img {
   height: 356px;
   width: 368px;
-  margin-right: 20px; 
+  margin-right: 20px;
+  border-radius: 25px;
 }
 
 .text-content {
   display: flex;
   flex-direction: column;
-  color: #ff51df
+  color: #ff51df;
+  max-width: 600px; /* Control the width */
+  padding: 10px;
+  margin: 0 auto; /* Center the text content */
 }
 
 .text-content h2 {
-  color: #ff51df
-  margin-bottom: 10px; 
+  color: #ff51df;
+  margin-bottom: 10px;
 }
 
 .text-content h4 {
-  margin-bottom: 20px; 
-  color: #ff51df
+  margin-bottom: 20px;
+  color: #ff51df;
 }
 
 .text-content h6 {
-  margin-top: 0; 
-  line-height: 1.5; 
-  color: #ff51df
+  margin-top: 0;
+  line-height: 1.5;
+  color: #ff51df;
 }
 
 .text {
@@ -91,7 +98,44 @@
 .list-text {
   display: flex;
   flex-direction: column;
-  list-style-type: none; 
+  list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  border: 2px solid #ff51df;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.list-footer li {
+  margin-bottom: 20px;
+}
+
+.list-footer li:last-child {
+  margin-bottom: 0;
+}
+
+.flex-box-footer {
+  background-color: #ff51df;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
 }

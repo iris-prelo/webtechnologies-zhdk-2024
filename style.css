@@ -1,0 +1,31 @@
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-top: 40;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.list-nav li {
+  margin-bottom: 20px;
+}
+
+.list-nav li:last-child {
+  margin-bottom: 0;
+  background-color: #b751ff;
+}
+
+.flex-box {
+  background-color: #3550ea;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+.flex-box a {
+  text-decoration: none;
+  color: #fff;
+}
