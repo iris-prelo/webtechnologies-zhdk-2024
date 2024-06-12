@@ -3,6 +3,9 @@ const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
 const PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
 const container = document.querySelector('div[data-js="tracks"]');
 
+let currentTrackPreviewUrl = null;
+let audioElement = new Audio();
+
 function fetchPlaylist(token, playlistId) {
   fetch(`https://api.spotify.com/v1/playlists/${PLAYLIST_ID}`, {
     method: "GET",
@@ -51,6 +54,21 @@ function displayTrackDetails(track) {
   document.querySelector(".album-cover").src = track.album.images[0].url;
   document.querySelector(".song-name").textContent = track.name;
   document.querySelector(".artist-name").textContent = track.artists.map(artist => artist.name).join(', ');
+  currentTrackPreviewUrl = track.preview_url;
+
+  if (currentTrackPreviewUrl) {
+    audioElement.src = currentTrackPreviewUrl;
+    audioElement.play();
+  } else {
+    audioElement.pause();
+  }
+}
+function togglePlayPause() {
+  if (audioElement.paused) {
+    audioElement.play();
+  } else {
+    audioElement.pause();
+  }
 }
 
 function fetchAccessToken() {
@@ -72,4 +90,5 @@ function fetchAccessToken() {
     });
 }
 
+document.querySelector('.play-bar-item img').addEventListener('click', togglePlayPause);
 fetchAccessToken();
