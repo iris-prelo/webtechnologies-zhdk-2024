@@ -22,6 +22,55 @@ li {
   margin: 10px 0;
 }
 
+.scroll-container {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.scroll-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.track-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.album-name {
+  font-size: 14px;
+  color: #666;
+}
+
 /* layout */
 .background {
   background-color: #ffc8ff;
@@ -61,6 +110,14 @@ li {
   border-bottom-right-radius: 40px;
 }
 
+.playlist-title {
+  align-self: flex-start; /* Align the title to the left */
+  font-size: 24px;
+
+  color: #6c6d71;
+  margin-bottom: 20px; /* Add space below the title */
+}
+
 /* content player */
 
 .menu-icon {
@@ -69,6 +126,7 @@ li {
   left: 60px;
   width: 60px;
   height: 60px;
+  opacity: 0.8;
 }
 
 .content {
@@ -119,6 +177,7 @@ li {
   height: 60px;
   width: 60px;
   margin: 0 10px;
+  opacity: 0.6;
 }
 
 .play-bar-item img {
@@ -145,6 +204,7 @@ li {
   height: 60px;
   width: 60px;
   margin: 0 10px;
+  opacity: 0.6;
 }
 
 .floating-menu-bar-item img {

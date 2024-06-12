@@ -4,8 +4,6 @@ const PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
 const container = document.querySelector('div[data-js="tracks"]');
 
 function fetchPlaylist(token, playlistId) {
-  console.log("token: ", token);
-
   fetch(`https://api.spotify.com/v1/playlists/${PLAYLIST_ID}`, {
     method: "GET",
     headers: {
@@ -14,13 +12,7 @@ function fetchPlaylist(token, playlistId) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-
       if (data.tracks && data.tracks.items) {
-        data.tracks.items.forEach((item) => {
-          console.log(item.track.name);
-        });
-
         addTracksToPage(data.tracks.items);
       }
     })
@@ -33,21 +25,32 @@ function addTracksToPage(tracks) {
   const ul = document.createElement("ul");
 
   tracks.forEach((track) => {
-    console.log("track: ", track);
     const li = document.createElement("li");
+    li.classList.add("track-item");
 
-    // Create a span that holds the album name
-    li.innerHTML = `<span class="album">Album: ${track.track.album.name}</span>`;
+    li.innerHTML = `
+      <img src="${track.track.album.images[0].url}" alt="${track.track.album.name}">
+      <div class="track-details">
+        <span class="track-name">${track.track.name}</span>
+        <span class="album-name">${track.track.album.name}</span>
+        <span class="artist-name" style="display: none;">${track.track.artists.map(artist => artist.name).join(', ')}</span>
+      </div>
+    `;
 
-    // Create another span that holds the track name
-    const trackSpan = document.createElement("span");
-    trackSpan.textContent = `Track: ${track.track.name}`;
-    trackSpan.classList.add("track");
-    li.appendChild(trackSpan);
+    li.addEventListener("click", () => {
+      displayTrackDetails(track.track);
+    });
 
     ul.appendChild(li);
   });
+
   container.appendChild(ul);
+}
+
+function displayTrackDetails(track) {
+  document.querySelector(".album-cover").src = track.album.images[0].url;
+  document.querySelector(".song-name").textContent = track.name;
+  document.querySelector(".artist-name").textContent = track.artists.map(artist => artist.name).join(', ');
 }
 
 function fetchAccessToken() {
@@ -60,7 +63,6 @@ function fetchAccessToken() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (data.access_token) {
         fetchPlaylist(data.access_token, PLAYLIST_ID);
       }
