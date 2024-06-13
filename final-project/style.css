@@ -1,8 +1,8 @@
-/* Song List */
-
 * {
   font-family: monospace;
 }
+
+/* Song List */
 
 .album {
   display: inline-block;
@@ -26,11 +26,12 @@ li {
   background-color: #ffffff;
   width: 100%;
   height: 100%;
+  flex-grow: 1;
   overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 20px;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px;
 }
 
 .scroll-container ul {
@@ -69,6 +70,45 @@ li {
 .album-name {
   font-size: 14px;
   color: #666;
+}
+
+.track-item.selected {
+  background-color: lightblue;
+}
+
+.playlist-title {
+  align-self: flex-start;
+  font-size: 24px;
+
+  color: #6c6d71;
+  margin-bottom: 20px;
+}
+
+.floating-menu-bar {
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.floating-menu-bar-item {
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+  opacity: 0.6;
+}
+
+.floating-menu-bar-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* layout */
@@ -110,15 +150,7 @@ li {
   border-bottom-right-radius: 40px;
 }
 
-.playlist-title {
-  align-self: flex-start; /* Align the title to the left */
-  font-size: 24px;
-
-  color: #6c6d71;
-  margin-bottom: 20px; /* Add space below the title */
-}
-
-/* content player */
+/* content music player */
 
 .menu-icon {
   position: absolute;
@@ -180,34 +212,20 @@ li {
   opacity: 0.6;
 }
 
-.play-bar-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.floating-menu-bar {
-  position: absolute;
-  bottom: 20px;
-  width: 300px;
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-
-.floating-menu-bar-item {
+.play-bar-item-button {
   height: 60px;
   width: 60px;
   margin: 0 10px;
   opacity: 0.6;
 }
 
-.floating-menu-bar-item img {
+.play-bar-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.play-bar-item-button img {
   width: 100%;
   height: 100%;
   object-fit: contain;

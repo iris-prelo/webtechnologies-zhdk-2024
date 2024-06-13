@@ -5,6 +5,7 @@ const container = document.querySelector('div[data-js="tracks"]');
 
 let currentTrackPreviewUrl = null;
 let audioElement = new Audio();
+let selectedTrack = null;
 
 function fetchPlaylist(token, playlistId) {
   fetch(`https://api.spotify.com/v1/playlists/${PLAYLIST_ID}`, {
@@ -41,7 +42,7 @@ function addTracksToPage(tracks) {
     `;
 
     li.addEventListener("click", () => {
-      displayTrackDetails(track.track);
+      selectTrack(li, track.track);
     });
 
     ul.appendChild(li);
@@ -69,6 +70,25 @@ function togglePlayPause() {
   } else {
     audioElement.pause();
   }
+  updatePlayPauseIcon();
+}
+
+function updatePlayPauseIcon() {
+  const playPauseIcon = document.getElementById('play-pause-icon');
+  if (audioElement.paused) {
+    playPauseIcon.src = 'images/play-button.png';
+  } else {
+    playPauseIcon.src = 'images/pause-button.png';
+  }
+}
+
+function selectTrack(trackElement, track) {
+  if (selectedTrack) {
+    selectedTrack.classList.remove('selected');
+  }
+  trackElement.classList.add('selected');
+  selectedTrack = trackElement;
+  displayTrackDetails(track);
 }
 
 function fetchAccessToken() {
@@ -90,5 +110,5 @@ function fetchAccessToken() {
     });
 }
 
-document.querySelector('.play-bar-item img').addEventListener('click', togglePlayPause);
+document.querySelector('.play-bar-item-button').addEventListener('click', togglePlayPause);
 fetchAccessToken();
