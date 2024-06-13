@@ -1,5 +1,6 @@
 * {
-  font-family: monospace;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Song List */
@@ -48,7 +49,7 @@ li {
   align-items: center;
   margin: 10px 0;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
@@ -65,24 +66,23 @@ li {
 }
 
 .track-name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
+  font-size: 15px;
+  font-weight: regular;
+  color: #6c6d71;
 }
 
 .album-name {
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #989898;
 }
 
 .track-item.selected {
-  background-color: #ffc8ff;
+  background-color: #efefef;
 }
 
 .playlist-title {
   align-self: flex-start;
   font-size: 24px;
-
   color: #6c6d71;
   margin-top: 40px;
   margin-left: 40px;
@@ -194,7 +194,7 @@ li {
 
 .time-bar {
   width: 600px;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
