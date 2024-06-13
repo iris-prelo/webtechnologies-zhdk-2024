@@ -1,6 +1,6 @@
 const SPOTIFY_CLIENT_ID = "67b411e20d594f30bf7a8d3bbde54285";
 const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
-const PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
+const PLAYLIST_ID = "5bQPvhuVFXqDdDnNNeOg9C";
 const container = document.querySelector('div[data-js="tracks"]');
 
 let currentTrackPreviewUrl = null;
