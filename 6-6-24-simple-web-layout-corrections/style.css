@@ -68,9 +68,9 @@
   display: flex;
   flex-direction: column;
   color: #ff51df;
-  max-width: 600px; /* Control the width */
+  max-width: 600px;
   padding: 10px;
-  margin: 0 auto; /* Center the text content */
+  margin: 0 auto;
 }
 
 .text-content h2 {
